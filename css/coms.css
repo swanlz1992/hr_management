@@ -1,0 +1,197 @@
+/* -------------------/5. 通用组件 u-/-------------------*/
+.g-hr__wrap__footer .u-footer {
+  display: block;
+  padding: 16px 20px;
+  height: 49px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+}
+
+/* 划出改变主题部分 */
+.u-hr__slidePart {
+  width: 340px;
+  height: 100vh;
+  position: fixed;
+  background: #fff;
+  top: 0;
+  right: -340px;
+  padding: 20px;
+  z-index: 6;
+}
+.u-hr__slidePart--show {
+  right: 0px;
+}
+.u-hr__slidePart > .iconfont {
+  background: var(--theme);
+  position: absolute;
+  /* 如果用 calc 来计算记得括号里面有空格 */
+  /* top: calc(50% - 30px);
+  left: calc(-50% + 120px); */
+  /* 父绝或固容器的50% */
+  top: 50%;
+  /* 用百分比制造贴着版心,子宽/父宽 */
+  left: -8.8%;
+  /* margin-left: 30px; */
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.u-mask {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+}
+
+/* 只有当u-hr__slidePart--show成立时,u-mask 才生效 */
+.u-hr__slidePart--show + .u-mask {
+  display: block;
+}
+
+.u-hr__slidePart h2 {
+  font-size: 18px;
+  font-family: Futura-Bold, Futura;
+  font-weight: bold;
+  color: #222222;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+.u-hr__slidePart__color {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.u-hr__slidePart__color li {
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.u-hr__slidePart__color li:nth-of-type(1) {
+  background-color: #fb6666;
+}
+.u-hr__slidePart__color li:nth-of-type(2) {
+  background-color: #fbbd66;
+}
+.u-hr__slidePart__color li:nth-of-type(3) {
+  background-color: #69fb66;
+}
+.u-hr__slidePart__color li:nth-of-type(4) {
+  background-color: #66ebfb;
+}
+.u-hr__slidePart__color li:nth-of-type(5) {
+  background-color: #9466fb;
+}
+.u-hr__slidePart__color li:nth-of-type(6) {
+  background-color: #e566fb;
+}
+.u-hr__slidePart__color li:nth-of-type(7) {
+  background-color: #fb66ac;
+}
+.u-hr__slidePart__color li:nth-of-type(8) {
+  background-color: #6672fb;
+}
+.u-hr__slidePart__line {
+  width: 100%;
+  height: 2px;
+  background: #f5f6f9;
+  margin-bottom: 20px;
+}
+.u-hr__slidePart__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.u-hr__slidePart__content p {
+  color: #222;
+}
+.u-hr__slidePart__switch {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background: #bebebe;
+  cursor: pointer;
+  /* left: 2px; */
+}
+.u-hr__slidePart__switch--open {
+  /* width: 40px;
+  height: 20px;
+  border-radius: 10px; */
+  background: var(--theme);
+}
+
+.u-hr__slidePart__switch:after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background: #fff;
+  position: relative;
+  top: 2px;
+  left: 20px;
+}
+.u-hr__slidePart__switch--open:after {
+  left: 4px;
+}
+/* -------------------/6. 响应式布局 u-/-------------------*/
+@media (max-width:1400px){
+
+}
+@media (max-width:1200px){
+  .g-hr__main__content {
+    margin-top: 20px;
+    margin-left: 20px;
+    background: #f5f6f9;
+    flex-grow: 1;
+    display: flex;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 44% 44% ;
+    grid-template-rows: 4% 4% 5%;
+    gap: 20px;
+    grid-template-areas:
+      'a a'
+      'b b'
+      'c c '
+      'c c '
+      'd d'
+      'd d'
+      'e e'
+      'f f'
+      'f f'
+      'g g'
+      'h h'
+
+  }
+  
+}
+@media (max-width:992px){
+  
+}
+@media (max-width:768px){
+  
+}
+@media (max-width:576px){
+  
+}

@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2888803 */
+  src: url('iconfont.woff2?t=1635488877825') format('woff2'),
+       url('iconfont.woff?t=1635488877825') format('woff'),
+       url('iconfont.ttf?t=1635488877825') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zhankaicelalan:before {
+  content: "\e68e";
+}
+
+.icon-check:before {
+  content: "\e600";
+}
+
+.icon-biaotou-kepaixu:before {
+  content: "\e8f7";
+}
+
+.icon-jing:before {
+  content: "\e80f";
+}
+
+.icon-sort:before {
+  content: "\e62e";
+}
+
+.icon-sousuo:before {
+  content: "\eafe";
+}
+
+.icon-xiaoxi:before {
+  content: "\e601";
+}
+
+.icon-tongzhi:before {
+  content: "\e640";
+}
+
+.icon-all-employees:before {
+  content: "\e66f";
+}
+
+.icon-client_line_b:before {
+  content: "\e871";
+}
+
+.icon-home-filling:before {
+  content: "\e68d";
+}
+
+.icon-project:before {
+  content: "\e653";
+}
+
+.icon-arrow-up:before {
+  content: "\e743";
+}
+
+.icon-arrow-down:before {
+  content: "\e7b2";
+}
+
+.icon-zhankaizhedie:before {
+  content: "\e615";
+}
+

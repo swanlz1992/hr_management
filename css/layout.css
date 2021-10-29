@@ -1,0 +1,213 @@
+/* -------------------/2. 通用方法 /-------------------*/
+/*清除浮动*/
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+/* 设置主题颜色变量 */
+:root {
+  --theme: #6672fb;
+}
+
+/* -------------------/3. 通用布局 g-/-------------------*/
+/* 
+  g-项目名__功能名--状态名
+  常用状态名:fixed(固定),closed(关闭),selected(选中)
+  常用功能名:sider(边栏),main(主体)
+*/
+.g-hr {
+  background: #f5f6f9;
+  display: flex;
+}
+/* 左右布局 */
+.g-hr__sider {
+  flex-shrink: 0;
+  width: 250px;
+  /* 如果只是单纯加上height:100vh; 这一块的高度不会随着滚动器滚动延伸*/
+  /* height: 100vh; */
+  min-height: 100vh;
+  /* height: 100vh; */
+  /* 让子元素 g-hr__wrap可以撑满整个空间,无论是否 fixed */
+  display: flex;
+  margin-right: 2px;
+}
+.g-hr .g-hr__main {
+  flex-grow: 1;
+  background: #f5f6f9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 左侧布局 */
+/* 折叠时的状态 */
+.g-hr__sider--closed {
+  width: 50px;
+  overflow: hidden;
+}
+.g-hr__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* 这里不能设 min-height,否则后面设置左侧菜单的滚动条会出不来*/
+  /* min-height: inherit; */
+  height: inherit;
+}
+/* 固定时的状态 */
+.g-hr__wrap--fixed {
+  position: fixed;
+  /* 因为子元素是定位层,已经跳脱了父元素g-hr__sider的图层, 此时父元素的 overflow 对它无效
+  让子元素继承父元素g-hr__sider的 width, 它 closed 的时候里面的元素也跟着closed */
+  /* background: purple; */
+  width: inherit;
+  overflow: hidden;
+  height: 100vh;
+}
+/* 左侧头部布局 */
+.g-hr__wrap-head {
+  flex-shrink: 0;
+  background: #fff;
+  width: 250px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+.g-hr__wrap-head img {
+  width: 161px;
+  /* margin-left:10px; */
+}
+/* 折叠时的 logo 状态 */
+.g-hr__sider--closed .g-hr__wrap-head img {
+  margin-left: -86px;
+  width: 140px;
+}
+/* 左侧中间布局 */
+.g-hr__wrap__main {
+  flex-grow: 1;
+  background: #ffffff;
+  /* background: red;    */
+  overflow: hidden scroll;
+}
+
+/* 设置滚动条样式 */
+.g-hr__wrap__main::-webkit-scrollbar {
+  /* 设置滚动条宽高,设为0则为隐藏滚动条 */
+  width: 0px;
+  height: 0px;
+}
+/* 设置滚动条滚动颜色 */
+.g-hr__wrap__main::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 3px;
+}
+/* 设置滚动条背景颜色 */
+.g-hr__wrap__main::-webkit-scrollbar-track {
+  background: green;
+  border-radius: 3px;
+}
+
+/* 左侧脚部布局 */
+.g-hr__wrap__footer {
+  flex-shrink: 0;
+  /* background: purple; */
+}
+
+/* 右侧布局 */
+/* 右侧头部 */
+.g-hr__main__title {
+  height: 70px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  /* position: sticky;
+  top: 300px; */
+  /* margin-bottom: 200px; */
+}
+.g-hr__main__title--fixed {
+  /* 设置left+right 可以让容器充满整个屏幕 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+/* 右侧尾部 */
+.g-hr__main__title--fixed:not(.hide)+.g-hr__main__content{
+  margin-top: 70px;
+}
+.g-hr__main__content {
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #f5f6f9;
+  /* background: red; */
+  flex-grow: 1;
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: stretch; */
+  /* justify-content: center; */
+  box-sizing: border-box;
+  display: grid;
+  /* 1110+ 60*/
+  /* grid-template-columns: 370px 412px 328px; */
+  grid-template-columns: 32% 35% 28%;
+  /* 706+ 80*/
+  /* grid-template-rows: 81px 110px 196px 319px; */
+  grid-template-rows: 10% 14% 25% 41%;
+  gap: 20px;
+  grid-template-areas:
+    'a a b'
+    'c d e'
+    'c d f'
+    'g g h';
+}
+
+/* -------------------/6. 响应式布局 u-/-------------------*/
+@media (max-width:1400px){
+
+}
+@media (max-width:1200px){
+  .g-hr__main__content {
+    margin-top: 20px;
+    margin-left: 20px;
+    background: #f5f6f9;
+    flex-grow: 1;
+    display: flex;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 44% 44% ;
+    grid-template-rows: 4% 4% 5%;
+    gap: 20px;
+    grid-template-areas:
+      'a a'
+      'b b'
+      'c c '
+      'c c '
+      'd d'
+      'd d'
+      'e e'
+      'f f'
+      'f f'
+      'g g'
+      'h h'
+
+  }
+  
+}
+@media (max-width:992px){
+  
+}
+@media (max-width:768px){
+  
+}
+@media (max-width:576px){
+  
+}
