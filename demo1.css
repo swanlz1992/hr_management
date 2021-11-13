@@ -1,0 +1,339 @@
+
+html {
+  font-size: 26.66667vw;
+}
+
+body {
+  height: 100vh;
+  font-size: 0.16rem;
+  font-family: Metropolis-SemiBold, Metropolis;
+}
+
+/* 确定版心 */
+.w {
+  margin: 0 auto;
+  width: 3.36rem;
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 3.75rem;
+  height: 0.72rem;
+  box-shadow: 0rem 0.07rem 0.15rem 0rem rgba(165, 165, 165, 0.07);
+  padding-bottom: 0.24rem;
+  padding: 0 0.2rem 0.24rem 0.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.header .logo {
+  width: 0.53rem;
+  height: 0.24rem;
+  font-size: 0.2rem;
+  font-weight: 600;
+  color: #161F3D;
+  line-height: 0.24rem;
+}
+
+.header .notice {
+  width: 0.24rem;
+}
+
+.live_add {
+  width: 3.65rem;
+  height: 0.9rem;
+  display: flex;
+  margin-bottom: 0.25rem;
+  background: #FEFEFE;
+}
+
+.live_add .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.live_add .top {
+  width: 0.59rem;
+  height: 0.59rem;
+  line-height: 0.59rem;
+  text-align: center;
+  background: #E7E5E5;
+  color: #474747;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.08rem;
+}
+
+.live_add .top img {
+  width: 0.8rem;
+  position: relative;
+  left: -0.14rem;
+  top: -0.04rem;
+}
+
+.live_add .top .iconfont {
+  font-size: 0.12rem;
+}
+
+.live_add .name {
+  width: 0.7rem;
+  height: 0.16rem;
+  font-size: 0.13rem;
+  font-family: Metropolis-Medium, Metropolis;
+  font-weight: 500;
+  color: #474747;
+  text-align: center;
+  /* color: white; */
+  line-height: 0.16rem;
+}
+
+.active_vocation {
+  height: 0.61rem;
+  border-bottom: 0.01rem solid #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.active_vocation .left {
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 50%;
+  background: url(./mobile_home_slices/active@2x.png) center;
+  background-size: 0.32rem;
+
+}
+
+.active_vocation .mid {
+  flex-grow: 1;
+  /* background: yellow; */
+  font-size: 0.15rem;
+  font-weight: 600;
+  color: #373737;
+  line-height: 0.2rem;
+  margin-left: 0.16rem;
+}
+
+.active_vocation .iconfont {
+  font-size: 0.22rem;
+}
+
+.profile {
+  height: 0.4rem;
+  display: grid;
+  grid-template-columns: 0.41rem 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-areas: "a b""a c"; */
+  margin-bottom: 0.21rem;
+  column-gap: 0.15rem;
+}
+
+.profile .pic {
+  /* grid-area: a; */
+  grid-area: 1/1/3/2;
+  width: 0.41rem;
+  height: 0.41rem;
+  border-radius: 0.41rem;
+  background: url(./public/people.png) center;
+  background-size: contain;
+}
+
+.profile h3 {
+  /* grid-area: b; */
+  grid-area: 1/2/2/3;
+  font-size: 0.15rem;
+  font-weight: 600;
+  color: #373737;
+  line-height: 0.2rem;
+
+}
+
+.profile p {
+  /* grid-area: c; */
+  grid-area: 2/2/3/3;
+  font-size: 0.13rem;
+  font-weight: 500;
+  color: #7A7A7A;
+  line-height: 0.2rem;
+}
+
+.status {
+  width: 1.08rem;
+  height: 0.32rem;
+  background: rgba(115, 101, 255, 0.11);
+  border-radius: 0.16rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.15rem;
+  font-weight: 500;
+  color: #7365FF;
+  padding: 0.05rem 0.15rem 0.08rem 0.09rem;
+  margin-bottom: 0.19rem;
+}
+
+.status img {
+  width: 0.2rem;
+}
+
+.des {
+  height: 0.71rem;
+  font-size: 0.15rem;
+  font-weight: 500;
+  color: #474747;
+  line-height: 0.22rem;
+  margin-bottom: 0.11rem;
+}
+
+.pics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.31rem;
+}
+
+.pics .left {
+  width: 2.46rem;
+  height: 1.49rem;
+  border-radius: 0.07rem;
+  background: center url('https://images.unsplash.com/photo-1633114127188-99b4dd741180?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+  background-size: 2.46rem;
+}
+
+.pics .right {
+  height: 1.49rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.pics .right div {
+  width: 0.81rem;
+  height: 0.71rem;
+  border-radius: 0.07rem;
+  background: center url('https://images.unsplash.com/photo-1633114127188-99b4dd741180?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+  background-size: 0.81rem;
+}
+
+.pics .right div:nth-of-type(2) {
+  background: center url('https://images.unsplash.com/photo-1633114127188-99b4dd741180?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+  background-size: 0.81rem;
+}
+
+.pics .right div:nth-of-type(2):after {
+  content: '7+';
+  width: 0.81rem;
+  height: 0.71rem;
+  line-height: 0.71rem;
+  border-radius: 0.07rem;
+  background: rgba(128, 128, 128, 0.3);
+  display: block;
+  font-size: 0.23rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.reaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.reaction div {
+  display: flex;
+  align-items: center;
+  font-size: 0.15rem;
+  font-weight: 500;
+  color: #474747;
+  line-height: 0.18rem;
+}
+
+.reaction div img {
+  width: 0.26rem;
+  margin-right: 0.07rem;
+}
+
+.reaction div:nth-of-type(2) {
+  flex-grow: 1;
+  margin-left: 0.33rem;
+}
+
+.reaction div:nth-of-type(3) span {
+  display: block;
+  width: 0.26rem;
+  height: 0.26rem;
+  border-radius: 0.26rem;
+  border: 0.02rem solid #FFFFFF;
+  margin-left: -0.11rem;
+  background: url('./public/people.png') center;
+  background-size: 0.26rem;
+}
+section:nth-last-of-type(1){
+  height: 6rem;
+}
+
+.menu {
+  width: 3.75rem;
+  height: 0.75rem;
+  background: #FFFEFE;
+  box-shadow: 0rem -0.04rem 0.42rem 0rem rgba(0, 0, 0, 0.09);
+  border-radius: 0.24rem 0.24rem 0rem 0rem;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu span {
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 0.32rem;
+  background: grey;
+  display: block;
+}
+
+.menu span:nth-of-type(1) {
+  background: url(./mobile_home_slices/home@2x.png) center;
+  background-size: 0.32rem;
+}
+
+.menu span:nth-of-type(2) {
+  background: url(./mobile_home_slices/search@2x.png) center;
+  background-size: 0.32rem;
+}
+
+.menu span:nth-of-type(3) {
+  background: url(./mobile_home_slices/nav3@2x.png) center;
+  background-size: 0.32rem;
+}
+
+.menu span:nth-of-type(4) {
+  background: url(./mobile_home_slices/profile@2x.png) center;
+  background-size: 0.32rem;
+}
+
+.menu::after {
+  display: block;
+  content: '+';
+  font-size: 0.3rem;
+  color: #fff;
+  text-align: center;
+  width: 0.52rem;
+  height: 0.52rem;
+  line-height: 0.48rem;
+  border-radius: 0.52rem;
+  background: #8A57EF;
+  box-shadow: 0rem 0.03rem 0.13rem 0rem rgba(0, 0, 0, 0.31);
+  position: absolute;
+  top: -0.79rem;
+  right: 0.52rem;
+}

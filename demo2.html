@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./public/iconfont.css">
+  <link rel="stylesheet" href="./reset.css">
+  <style>
+    body {
+      /* height: 100vh; */
+      font-family: Metropolis-Medium, Metropolis;
+      color: #161F3D;
+    }
+
+    .w {
+      width: 89.333vw;
+      margin: 0 auto;
+    }
+
+    .search {
+      width: 89.333vw;
+      height: 11.733vw;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      padding: 3.2vw 5.6vw 3.467vw;
+      margin-bottom: 4.533vw;
+      background: #E6E6E7;
+      border-radius: 5.6vw;
+      margin-top: 4.533vw;
+    }
+
+    .search input {
+      outline: none;
+      border: none;
+      background: transparent;
+      width: 57.333vw;
+      font-size: 4vw;
+      font-weight: 500;
+      line-height: 4.8vw;
+    }
+
+    .search div {
+      width: 6.4vw;
+      height: 6.667vw;
+      background: url(./mobile_home_slices/search@2x.png);
+      background-size: 6.4vw;
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      /* background: black; */
+      margin-bottom: 5.067vw;
+    }
+
+    .title div {
+      font-size: 4vw;
+      font-weight: 600;
+      color: #515F66;
+      line-height: 6.4vw;
+      position: relative;
+    }
+
+    .title .active {
+      color: #7365FF;
+    }
+
+    .title .line {
+      width: 7.733vw;
+      height: 0.8vw;
+      background: #7365FF;
+      border-radius: 0.533vw;
+      position: absolute;
+      top: 10.933vw;
+      left: 1.333vw;
+      /* left: 45.867vw; */
+    }
+
+    .content {
+      width: 100vw;
+      height: 71.733vw;
+      background: #FFFFFF;
+      box-shadow: 0vw 1.067vw 8vw 0vw rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 6.133vw 5.333vw 5.067vw;
+      margin-bottom: 2.667vw;
+    }
+
+    .content div {
+      width: 89.333vw;
+      height: 39.733vw;
+      border-radius: 1.867vw;
+      background: purple;
+      margin-bottom: 6.933vw;
+    }
+
+    .content h2 {
+      font-size: 5.6vw;
+      font-weight: bold;
+      color: #373737;
+      line-height: 5.333vw;
+      /* background: skyblue; */
+      margin-bottom: 2.667vw;
+    }
+
+    .content span {
+      font-size: 4vw;
+      font-weight: 500;
+      color: #7A7A7A;
+      line-height: 5.867vw;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="search w">
+    <input type="text" placeholder="Type any keywords to search">
+    <div></div>
+  </div>
+  <div class="title w">
+    <div class="left active">
+      Trips
+      <div class="line"></div>
+    </div>
+    <div class="right">
+      Photos
+    </div>
+  </div>
+  <div class="content w">
+    <div></div>
+    <h2>Honeymoon Trip</h2>
+    <span>09 Jan 2020-16 Mar 2020</span>
+  </div>
+  <div class="content w">
+    <div></div>
+    <h2>Honeymoon Trip</h2>
+    <span>09 Jan 2020-16 Mar 2020</span>
+  </div>
+</body>
+
+</html>

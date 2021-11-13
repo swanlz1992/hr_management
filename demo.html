@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      height: 2000px;
+      width: 2000px;
+      display: flex;
+      /* flex-direction: column; */
+    }
+    .child {
+      /* 主轴方向的 height 和 min-height设置为100vh 是不同的.用 min-height高度会随着滚动器滚动延伸*/
+      /* height: 100vh; */
+      /* min-height: 100vh; */
+      /* 交叉轴方向的width 和 min-width 设置为100vw 都是一样的*/
+      /* width: 100vw; */
+      min-width: 100vw;
+      background: purple;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="child">123</div>
+  </div>
+</body>
+</html>

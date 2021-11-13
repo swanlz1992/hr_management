@@ -30,15 +30,15 @@
 .g-hr__sider {
   flex-shrink: 0;
   width: 250px;
+  /* width: 17%; */
   /* 如果只是单纯加上height:100vh; 这一块的高度不会随着滚动器滚动延伸*/
   /* height: 100vh; */
   min-height: 100vh;
-  /* height: 100vh; */
   /* 让子元素 g-hr__wrap可以撑满整个空间,无论是否 fixed */
   display: flex;
   margin-right: 2px;
 }
-.g-hr .g-hr__main {
+.g-hr__main {
   flex-grow: 1;
   background: #f5f6f9;
   display: flex;
